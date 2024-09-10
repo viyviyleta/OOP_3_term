@@ -1,0 +1,14 @@
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\bin\Debug\net6.0\SE_Lab1.exe
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\bin\Debug\net6.0\SE_Lab1.deps.json
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\bin\Debug\net6.0\SE_Lab1.runtimeconfig.json
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\bin\Debug\net6.0\SE_Lab1.dll
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\bin\Debug\net6.0\SE_Lab1.pdb
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.AssemblyInfoInputs.cache
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.AssemblyInfo.cs
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.csproj.CoreCompileInputs.cache
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.dll
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\refint\SE_Lab1.dll
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.pdb
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\SE_Lab1.genruntimeconfig.cache
+D:\3 семестр\OOP\lab1\SE_Lab1\SE_Lab1\obj\Debug\net6.0\ref\SE_Lab1.dll
