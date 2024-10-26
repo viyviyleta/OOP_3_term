@@ -1,0 +1,24 @@
+[
+  {
+    "production": {
+      "Id": 1,
+      "OrganizationName": "TV"
+    },
+    "developer": {
+      "Id": 2006,
+      "FullName": "Babich Violetta",
+      "Department": "BSTU"
+    }
+  },
+  {
+    "production": {
+      "Id": 1,
+      "OrganizationName": "TV"
+    },
+    "developer": {
+      "Id": 2006,
+      "FullName": "Babich Violetta",
+      "Department": "BSTU"
+    }
+  }
+]
