@@ -1,0 +1,12 @@
+Список папок:
+D:\$RECYCLE.BIN
+D:\3семестр
+D:\Microsoft Visual Studio
+D:\NI Circuit Design Suite 14.0.1
+D:\sims4
+D:\System Volume Information
+D:\ОПИ
+D:\Фотографии
+Список файлов:
+D:\1 семестр.rar
+D:\2 семестр.rar

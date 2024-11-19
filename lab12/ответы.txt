@@ -1,0 +1,242 @@
+### 1. Какие классы содержатся в `System.IO`?
+
+Пространство имен **`System.IO`** предоставляет классы для работы с файлами, папками и потоками данных. Основные классы:
+- **`File`**: Статические методы для работы с файлами.
+- **`FileInfo`**: Методы для работы с файлами через экземпляры.
+- **`Directory`**: Статические методы для работы с директориями.
+- **`DirectoryInfo`**: Методы для работы с директориями через экземпляры.
+- **`Stream`**: Базовый класс для потоков.
+  - **`FileStream`**: Поток для работы с файлами.
+  - **`MemoryStream`**: Поток для работы с данными в памяти.
+  - **`BufferedStream`**: Буферизированный поток.
+- **`StreamReader`**: Чтение текстовых данных.
+- **`StreamWriter`**: Запись текстовых данных.
+- **`BinaryReader`** и **`BinaryWriter`**: Чтение и запись бинарных данных.
+- **`Path`**: Утилиты для работы с путями файлов и директорий.
+- **`DriveInfo`**: Информация о дисках.
+
+---
+
+### 2. Для чего используются классы `Directory` и `DirectoryInfo`? В чем отличие?
+
+#### **`Directory`**:
+- Содержит статические методы для работы с директориями.
+- Используется для операций, которые не требуют создания экземпляра класса.
+- Пример:
+  ```csharp
+  Directory.CreateDirectory("path");
+  var files = Directory.GetFiles("path");
+  ```
+
+#### **`DirectoryInfo`**:
+- Содержит аналогичные методы, но работает через экземпляры.
+- Удобен для хранения информации о конкретной директории.
+- Пример:
+  ```csharp
+  DirectoryInfo dir = new DirectoryInfo("path");
+  dir.Create();
+  var files = dir.GetFiles();
+  ```
+
+**Разница**: `Directory` — статический и быстрее при простых операциях. `DirectoryInfo` — объектно-ориентированный, удобен для хранения состояния.
+
+---
+
+### 3. Для чего используются классы `File` и `FileInfo`? Какие методы они содержат?
+
+#### **`File`**:
+- Статический класс для работы с файлами.
+- Основные методы:
+  - **`Create()`**: Создать файл.
+  - **`Delete()`**: Удалить файл.
+  - **`Copy()`**: Скопировать файл.
+  - **`Move()`**: Переместить файл.
+  - **`ReadAllText()`**, **`WriteAllText()`**: Читать/писать весь текст.
+  - **`AppendText()`**: Добавить текст в файл.
+
+#### **`FileInfo`**:
+- Класс для работы с файлами через экземпляры.
+- Основные методы:
+  - **`Create()`**, **`Delete()`**, **`CopyTo()`**, **`MoveTo()`**: Аналогичные методам `File`.
+  - **`Length`**: Получить размер файла.
+  - **`Exists`**: Проверить наличие файла.
+
+**Разница**: `File` — статический, удобен для разовых операций. `FileInfo` — объектно-ориентированный, хранит информацию о файле.
+
+---
+
+### 4. Для чего используются классы `StreamReader` и `StreamWriter`?
+
+- **`StreamReader`**: Для чтения текстовых данных из файла или потока.
+  - Методы:
+    - **`ReadLine()`**: Прочитать строку.
+    - **`ReadToEnd()`**: Прочитать весь текст.
+    - **`Close()`**: Закрыть поток.
+
+- **`StreamWriter`**: Для записи текстовых данных в файл или поток.
+  - Методы:
+    - **`Write()`**, **`WriteLine()`**: Записать строку.
+    - **`Close()`**: Закрыть поток.
+
+Пример:
+```csharp
+using (StreamWriter writer = new StreamWriter("file.txt"))
+{
+    writer.WriteLine("Hello, World!");
+}
+
+using (StreamReader reader = new StreamReader("file.txt"))
+{
+    string content = reader.ReadToEnd();
+    Console.WriteLine(content);
+}
+```
+
+---
+
+### 5. Для чего используются классы `BinaryWriter` и `BinaryReader`?
+
+- **`BinaryWriter`**:
+  - Для записи данных в бинарном формате.
+  - Методы:
+    - **`Write()`**: Записывает значения (int, double, string и т.д.).
+    - **`Close()`**: Закрывает поток.
+
+- **`BinaryReader`**:
+  - Для чтения данных в бинарном формате.
+  - Методы:
+    - **`ReadInt32()`**, **`ReadDouble()`**, **`ReadString()`**: Чтение данных разных типов.
+    - **`Close()`**: Закрывает поток.
+
+Пример:
+```csharp
+using (BinaryWriter writer = new BinaryWriter(File.Open("data.bin", FileMode.Create)))
+{
+    writer.Write(42);
+    writer.Write(3.14);
+    writer.Write("Hello");
+}
+
+using (BinaryReader reader = new BinaryReader(File.Open("data.bin", FileMode.Open)))
+{
+    int intValue = reader.ReadInt32();
+    double doubleValue = reader.ReadDouble();
+    string stringValue = reader.ReadString();
+    Console.WriteLine($"{intValue}, {doubleValue}, {stringValue}");
+}
+```
+
+---
+
+### 6. Как можно сжимать и восстанавливать файлы?
+
+Для сжатия и восстановления файлов в .NET используются классы из **`System.IO.Compression`**, например:
+- **`GZipStream`**: Для сжатия и распаковки данных.
+- **`DeflateStream`**: Альтернатива `GZipStream` для сжатия.
+
+Пример:
+```csharp
+// Сжатие
+using (FileStream sourceStream = File.OpenRead("source.txt"))
+using (FileStream destStream = File.Create("source.gz"))
+using (GZipStream compressionStream = new GZipStream(destStream, CompressionMode.Compress))
+{
+    sourceStream.CopyTo(compressionStream);
+}
+
+// Распаковка
+using (FileStream compressedStream = File.OpenRead("source.gz"))
+using (FileStream destStream = File.Create("output.txt"))
+using (GZipStream decompressionStream = new GZipStream(compressedStream, CompressionMode.Decompress))
+{
+    decompressionStream.CopyTo(destStream);
+}
+```
+
+---
+
+### 7. Расскажите алгоритм сжатия GZip.
+
+**GZip** — это формат сжатия, основанный на алгоритме DEFLATE.  
+Шаги алгоритма:
+1. **Разделение данных**: Разбивка данных на блоки.
+2. **Сжатие блоков**: Используется комбинация методов LZ77 и кодирования Хаффмана.
+3. **Добавление метаданных**: Содержит CRC32 (контрольная сумма) и размер исходных данных.
+
+---
+
+### 8. Для чего служит класс `Path`?
+
+**Класс `Path`** предоставляет методы для работы с путями файлов и директорий. Основные методы:
+- **`GetDirectoryName()`**: Возвращает путь к каталогу.
+- **`GetFileName()`**: Возвращает имя файла.
+- **`GetExtension()`**: Возвращает расширение файла.
+- **`Combine()`**: Соединяет пути.
+- **`ChangeExtension()`**: Изменяет расширение.
+
+Пример:
+```csharp
+string path = Path.Combine("folder", "file.txt");
+Console.WriteLine(Path.GetExtension(path)); // .txt
+```
+
+---
+
+### 9. Что такое текстовый и бинарный файл? Как можно выполнить чтение и запись в эти файлы?
+
+- **Текстовый файл**: Хранит данные в виде текста (ASCII, UTF-8).
+  - Чтение/запись: `StreamReader`, `StreamWriter`.
+
+- **Бинарный файл**: Хранит данные в двоичном формате.
+  - Чтение/запись: `BinaryReader`, `BinaryWriter`.
+
+Пример:
+```csharp
+// Текстовый файл
+File.WriteAllText("text.txt", "Hello, World!");
+string text = File.ReadAllText("text.txt");
+
+// Бинарный файл
+using (BinaryWriter writer = new BinaryWriter(File.Create("binary.bin")))
+{
+    writer.Write(42);
+}
+using (BinaryReader reader = new BinaryReader(File.OpenRead("binary.bin")))
+{
+    int value = reader.ReadInt32();
+}
+```
+
+---
+
+### 10. Что такое произвольный доступ к файлу? Приведите пример.
+
+**Произвольный доступ** означает возможность читать и записывать данные в произвольные позиции файла, без последовательного прохода. Используется класс **`FileStream`**.
+
+Пример:
+```csharp
+using (FileStream fs = new FileStream("file.dat", FileMode.OpenOrCreate))
+{
+    fs.Seek(5, SeekOrigin.Begin); // Перейти на 5-й байт
+    fs.WriteByte(42);            // Записать значение
+}
+```
+
+---
+
+### 11. Как применяется конструкция `using` (не директива) при работе с файловыми потоками?
+
+**Конструкция `using`** автоматически освобождает ресурсы (вызов `Dispose()`) после завершения работы.
+
+
+
+Пример:
+```csharp
+using (StreamWriter writer = new StreamWriter("file.txt"))
+{
+    writer.WriteLine("Hello, World!");
+} // Поток закрывается автоматически
+```
+
+**Зачем использовать?**  
+Обеспечивает корректное освобождение ресурсов и предотвращает утечки памяти.
