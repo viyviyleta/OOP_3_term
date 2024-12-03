@@ -1,0 +1,222 @@
+### 1. Что такое сериализация и десериализация?
+
+- **Сериализация** — это процесс преобразования объекта в формат, пригодный для хранения или передачи, например, в файл, базу данных или сеть. Форматы могут быть текстовыми (JSON, XML) или двоичными.
+- **Десериализация** — обратный процесс восстановления объекта из сохраненного формата.
+
+Пример: Сериализация объекта `Person` в JSON для отправки по сети, а затем его восстановление на другой стороне.
+
+---
+
+### 2. Какие существуют форматы сериализации?
+
+**1. JSON (JavaScript Object Notation):**
+   - Структура: данные хранятся в формате ключ-значение.
+     ```json
+     {
+         "name": "John",
+         "age": 30
+     }
+     ```
+   - Классы .NET: `JsonSerializer`, `JsonConvert` (в библиотеке Newtonsoft.Json).
+
+**2. XML (Extensible Markup Language):**
+   - Структура: данные представлены в виде элементов с тегами.
+     ```xml
+     <Person>
+         <Name>John</Name>
+         <Age>30</Age>
+     </Person>
+     ```
+   - Классы .NET: `XmlSerializer`, `XmlDocument`.
+
+**3. Binary (двоичный формат):**
+   - Структура: данные кодируются в байты. Экономит память, но нечитабельно человеком.
+   - Классы .NET: `BinaryFormatter` (устаревший), `DataContractSerializer`.
+
+**4. SOAP (Simple Object Access Protocol):**
+   - Структура: представляет данные в формате XML, оптимизированном для работы с веб-сервисами.
+     ```xml
+     <SOAP-ENV:Envelope>
+         <SOAP-ENV:Body>
+             <Person>
+                 <Name>John</Name>
+                 <Age>30</Age>
+             </Person>
+         </SOAP-ENV:Body>
+     </SOAP-ENV:Envelope>
+     ```
+   - Классы .NET: `SoapFormatter` (устаревший).
+
+---
+
+### 3. Какие классы существуют в пространстве имен System.Xml?
+
+- **`XmlDocument`**: позволяет работать с XML в виде дерева (парсинг, модификация).
+- **`XmlReader` / `XmlWriter`**: чтение и запись XML в потоках.
+- **`XmlSerializer`**: сериализация объектов в XML и обратно.
+- **`XPathNavigator`**: позволяет выполнять XPath-запросы для поиска данных в XML.
+- **`XmlSchema`**: работа с XML-схемами (валидация данных).
+
+---
+
+### 4. Какие атрибуты используются для настройки XML-сериализации?
+
+- **`[XmlRoot]`**: задает корневой элемент XML.
+  ```csharp
+  [XmlRoot("RootName")]
+  public class MyClass { }
+  ```
+- **`[XmlElement]`**: задает имя XML-элемента для свойства или поля.
+  ```csharp
+  [XmlElement("Name")]
+  public string FirstName { get; set; }
+  ```
+- **`[XmlAttribute]`**: преобразует свойство в XML-атрибут.
+  ```csharp
+  [XmlAttribute]
+  public int Id { get; set; }
+  ```
+- **`[XmlIgnore]`**: исключает свойство из сериализации.
+- **`[XmlArray]` / `[XmlArrayItem]`**: указывают, как сериализовать коллекции.
+  ```csharp
+  [XmlArray("Items")]
+  [XmlArrayItem("Item")]
+  public List<string> Items { get; set; }
+  ```
+
+---
+
+### 5. В чем отличие BinaryFormatter и SoapFormatter?
+
+- **BinaryFormatter**:
+  - Используется для двоичной сериализации.
+  - Подходит для локального хранения.
+  - Устарел в .NET 5+ по соображениям безопасности.
+
+- **SoapFormatter**:
+  - Использует XML в формате SOAP.
+  - Предназначен для веб-сервисов.
+  - Также устарел, заменен WCF и REST API.
+
+---
+
+### 6. Что такое сериализация контрактов данных? Контракт данных?
+
+- **Контракт данных** — это соглашение о том, как объект будет сериализован и десериализован. Он задает структуру и свойства объекта.
+- **Сериализация контрактов данных** используется в WCF (Windows Communication Foundation) для передачи данных между клиентом и сервером.
+- Атрбуты:
+  - `[DataContract]` — указывает, что класс сериализуем.
+  - `[DataMember]` — указывает, какие свойства/поля включать.
+    ```csharp
+    [DataContract]
+    public class Person
+    {
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public int Age { get; set; }
+    }
+    ```
+
+---
+
+### 7. Где и для чего используются атрибуты `[OnSerializing]`, `[OnSerialized]`, `[OnDeserializing]`, `[OnDeserialized]`?
+
+Эти атрибуты используются для выполнения дополнительной логики во время сериализации/десериализации:
+
+- **`[OnSerializing]`**: метод выполняется перед сериализацией.
+- **`[OnSerialized]`**: метод выполняется после сериализации.
+- **`[OnDeserializing]`**: метод выполняется перед десериализацией.
+- **`[OnDeserialized]`**: метод выполняется после десериализации.
+
+Пример:
+```csharp
+[DataContract]
+public class Person
+{
+    [DataMember]
+    public string Name { get; set; }
+
+    [OnDeserialized]
+    private void OnDeserialized(StreamingContext context)
+    {
+        Console.WriteLine("Object deserialized!");
+    }
+}
+```
+
+---
+
+### 8. Что такое XPath? Приведите пример.
+
+**XPath** — это язык для навигации по XML-документу. Позволяет выбирать узлы, элементы и атрибуты по запросам.
+
+Пример:
+```xml
+<Root>
+    <Circle>
+        <Radius>5</Radius>
+    </Circle>
+    <Rectangle>
+        <Width>4</Width>
+    </Rectangle>
+</Root>
+```
+
+Запрос: `//Circle/Radius`
+- Результат: узел `<Radius>` с содержимым `5`.
+
+Пример в коде:
+```csharp
+XmlDocument doc = new XmlDocument();
+doc.Load("Figures.xml");
+XmlNode node = doc.SelectSingleNode("//Circle/Radius");
+Console.WriteLine(node.InnerText); // Вывод: 5
+```
+
+---
+
+### 9. Какие возможности дает LINQ to XML? Приведите примеры.
+
+**LINQ to XML** — это API для работы с XML в стиле LINQ.
+
+Основные возможности:
+1. **Создание XML**:
+   ```csharp
+   XElement root = new XElement("Root",
+       new XElement("Circle", new XElement("Radius", 5)),
+       new XElement("Rectangle", new XElement("Width", 4))
+   );
+   Console.WriteLine(root);
+   ```
+
+2. **Чтение XML**:
+   ```csharp
+   XElement root = XElement.Load("Figures.xml");
+   var circles = root.Elements("Circle");
+   foreach (var circle in circles)
+   {
+       Console.WriteLine(circle);
+   }
+   ```
+
+3. **Фильтрация данных**:
+   ```csharp
+   var largeCircles = root.Elements("Circle")
+                          .Where(x => (int)x.Element("Radius") > 10);
+   foreach (var circle in largeCircles)
+   {
+       Console.WriteLine(circle);
+   }
+   ```
+
+4. **Модификация XML**:
+   ```csharp
+   XElement root = XElement.Load("Figures.xml");
+   var circle = root.Element("Circle");
+   circle.SetElementValue("Radius", 10);
+   root.Save("Figures.xml");
+   ```
+
+LINQ to XML удобен благодаря интеграции с C# и интуитивно понятному синтаксису.

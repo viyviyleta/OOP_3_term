@@ -1,0 +1,13 @@
+[
+  {
+    "type": "Circle",
+    "radius": 5,
+    "area": 78.53981633974483
+  },
+  {
+    "type": "Rectangle",
+    "width": 4,
+    "height": 6,
+    "area": 24
+  }
+]
