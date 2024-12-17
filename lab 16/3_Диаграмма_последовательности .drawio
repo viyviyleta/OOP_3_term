@@ -1,0 +1,275 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 YaBrowser/24.12.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="455" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-1" value="Клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-3" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="55" y="160" width="10" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-5" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="65" y="181" width="175" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-6" value="Открыть банковский счет&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-7" value="BankAccount" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="100" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-20" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry x="45" y="220" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-24" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry x="45" y="300" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-33" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry x="45" y="450" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-40" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry x="45" y="580" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-8" value="Банковский счет открыт" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-7" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="230" as="sourcePoint" />
+            <mxPoint x="70" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-9" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-3" target="cvZeyYkybfoGC-3KSXAa-11">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="70" y="280" as="sourcePoint" />
+            <mxPoint x="280" y="281" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="280" />
+              <mxPoint x="230" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-12" value="Сделать карту&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-9">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-11" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="285" y="241" width="10" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="295" y="277" width="145" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-16" value="Создание карты&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="255" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-17" value="Card" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="440" y="255" width="100" height="655" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-28" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-17">
+          <mxGeometry x="45" y="290" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-48" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="cvZeyYkybfoGC-3KSXAa-17">
+          <mxGeometry x="45" y="540" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-18" value="Карта создана" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="330" as="sourcePoint" />
+            <mxPoint x="295" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-19" value="Карта создана" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-11" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="350" as="sourcePoint" />
+            <mxPoint x="90" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="205" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-21" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="400" as="sourcePoint" />
+            <mxPoint x="285" y="401" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-22" value="Положить деньги" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-21">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-23" value="Деньги положены" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="430" as="sourcePoint" />
+            <mxPoint x="65" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="205" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-25" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="480" as="sourcePoint" />
+            <mxPoint x="285" y="481" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-26" value="Снять деньги" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-25">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-27" value="Деньги сняты&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="510" as="sourcePoint" />
+            <mxPoint x="65" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="205" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-29" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="67" y="550" as="sourcePoint" />
+            <mxPoint x="487" y="551.0476190476188" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="67" y="551" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-30" value="Оплатить" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-29">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="147" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-32" value="Оплачено&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-28" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry x="0.2619" relative="1" as="geometry">
+            <mxPoint x="480" y="590" as="sourcePoint" />
+            <mxPoint x="255" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="395" y="580" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-34" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="620" as="sourcePoint" />
+            <mxPoint x="285" y="621" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-35" value="Заблокировать счет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-34">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-36" value="Счет заблокирован" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="640" as="sourcePoint" />
+            <mxPoint x="70" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-37" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="690" as="sourcePoint" />
+            <mxPoint x="285" y="691" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-38" value="Разблокировать счет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-37">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-39" value="Счет разблокирован" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="720" as="sourcePoint" />
+            <mxPoint x="65" y="720" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-41" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="65" y="750" as="sourcePoint" />
+            <mxPoint x="285" y="751" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-42" value="Удалить счет" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-41">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="86" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-43" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="285.86" y="790" as="sourcePoint" />
+            <mxPoint x="80.00283389136904" y="791" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="286" y="791" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-44" value="Выдать все деньги" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-43">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="-117" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-45" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1" target="cvZeyYkybfoGC-3KSXAa-48">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="295" y="810" as="sourcePoint" />
+            <mxPoint x="480" y="811" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="295" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-46" value="Удалить карту" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cvZeyYkybfoGC-3KSXAa-45">
+          <mxGeometry x="-0.9632" y="7" relative="1" as="geometry">
+            <mxPoint x="107" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-47" value="Карта удалена" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="cvZeyYkybfoGC-3KSXAa-48" target="cvZeyYkybfoGC-3KSXAa-40">
+          <mxGeometry x="-0.1053" relative="1" as="geometry">
+            <mxPoint x="460" y="850" as="sourcePoint" />
+            <mxPoint x="300" y="850" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="860" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cvZeyYkybfoGC-3KSXAa-49" value="Счет удален" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="cvZeyYkybfoGC-3KSXAa-3">
+          <mxGeometry x="0.1364" relative="1" as="geometry">
+            <mxPoint x="285" y="890" as="sourcePoint" />
+            <mxPoint x="95" y="890" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="890" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
